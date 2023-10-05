@@ -37,11 +37,11 @@ class DataIngestion:
             zf.extract(f, working_dir)
 
         if os.path.getsize(target_filepath) == 0:
+            logger.info(f"removing {target_filepath} file of 0 size")
             os.remove(target_filepath)
-            logger.info(f"removing file of 0 size")
 
     def unzip_and_clean(self):
-        logger.info(f"Unzzipping File and Removing Unwanted Files")
+        logger.info("Unzzipping File and Removing Unwanted Files")
         with ZipFile(file=self.config.local_data_file, mode="r") as zf:
             list_of_files = zf.namelist()
             updated_list_of_files = self._get_updated_list_of_files(list_of_files)
