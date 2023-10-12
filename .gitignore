@@ -172,3 +172,8 @@ artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2022-09-24-11-00-35/v
 mlruns/*
 research/mlflow_dir/mlruns/*
 prediction_service/model.h5
+.dvc/config
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-10-11-07-32-33/train/events.out.tfevents.1696989757.DESKTOP-J56F6J4.20840.0.v2
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-10-11-07-32-33/validation/events.out.tfevents.1696994896.DESKTOP-J56F6J4.20840.1.v2
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-10-12-12-21-50/train/events.out.tfevents.1697093512.DESKTOP-J56F6J4.5344.0.v2
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-10-12-12-21-50/validation/events.out.tfevents.1697098849.DESKTOP-J56F6J4.5344.1.v2
