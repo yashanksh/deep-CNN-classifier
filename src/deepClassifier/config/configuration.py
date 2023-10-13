@@ -1,6 +1,13 @@
 from deepClassifier.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from deepClassifier.utils import read_yaml, create_directories
-from deepClassifier.entity import DataIngestionConfig, PrepareBaseModelConfig, PrepareCallbacksConfig,TrainingConfig
+from deepClassifier.entity import (
+    DataIngestionConfig,
+    PrepareBaseModelConfig,
+    PrepareCallbacksConfig,
+    TrainingConfig,
+    EvaluationConfig
+)
+
 from pathlib import Path
 import os
 
@@ -90,6 +97,17 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+
+    def get_validation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model="artifacts/training/model.h5",
+            training_data="artifacts/data_ingestion/PetImages",
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+        return eval_config
 
 
 
